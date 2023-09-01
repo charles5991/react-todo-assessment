@@ -64,7 +64,7 @@ const SignUpForm = (props) => {
                     <Form>
                         <FormContainer>
                             <FormItem
-                                label="User Name"
+                                label="用戶名"
                                 invalid={errors.userName && touched.userName}
                                 errorMessage={errors.userName}
                             >

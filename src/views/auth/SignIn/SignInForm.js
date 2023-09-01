@@ -14,18 +14,13 @@ import * as Yup from 'yup'
 import useAuth from 'utils/hooks/useAuth'
 
 const validationSchema = Yup.object().shape({
-    userName: Yup.string().required('Please enter your user name'),
-    password: Yup.string().required('Please enter your password'),
+    userName: Yup.string().required('輸入用戶名'),
+    password: Yup.string().required('請輸入密碼'),
     rememberMe: Yup.bool(),
 })
 
 const SignInForm = (props) => {
-    const {
-        disableSubmit = false,
-        className,
-        forgotPasswordUrl = '/forgot-password',
-        signUpUrl = '/sign-up',
-    } = props
+    const { disableSubmit = false, className } = props
 
     const [message, setMessage] = useTimeOutMessage()
 
@@ -71,7 +66,7 @@ const SignInForm = (props) => {
                     <Form>
                         <FormContainer>
                             <FormItem
-                                label="User Name"
+                                label="用戶名"
                                 invalid={errors.userName && touched.userName}
                                 errorMessage={errors.userName}
                             >
@@ -79,32 +74,29 @@ const SignInForm = (props) => {
                                     type="text"
                                     autoComplete="off"
                                     name="userName"
-                                    placeholder="User Name"
+                                    placeholder="charles"
                                     component={Input}
                                 />
                             </FormItem>
                             <FormItem
-                                label="Password"
+                                label="密碼"
                                 invalid={errors.password && touched.password}
                                 errorMessage={errors.password}
                             >
                                 <Field
                                     autoComplete="off"
                                     name="password"
-                                    placeholder="Password"
+                                    placeholder="xxxxxx"
                                     component={PasswordInput}
                                 />
                             </FormItem>
-                            <div className="flex justify-between mb-6">
+                            <div className="flex justify-center mb-6">
                                 <Field
                                     className="mb-0"
                                     name="rememberMe"
                                     component={Checkbox}
-                                    children="Remember Me"
+                                    children="記住我"
                                 />
-                                <ActionLink to={forgotPasswordUrl}>
-                                    Forgot Password?
-                                </ActionLink>
                             </div>
                             <Button
                                 block
@@ -112,12 +104,8 @@ const SignInForm = (props) => {
                                 variant="solid"
                                 type="submit"
                             >
-                                {isSubmitting ? 'Signing in...' : 'Sign In'}
+                                {isSubmitting ? '登入中...' : '登入'}
                             </Button>
-                            <div className="mt-4 text-center">
-                                <span>Don't have an account yet? </span>
-                                <ActionLink to={signUpUrl}>Sign up</ActionLink>
-                            </div>
                         </FormContainer>
                     </Form>
                 )}
