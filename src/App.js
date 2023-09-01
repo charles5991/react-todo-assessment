@@ -9,10 +9,7 @@ import history from './history'
 import mockServer from './mock'
 import appConfig from 'configs/app.config'
 import './locales'
-import {
-    QueryClient,
-    QueryClientProvider,
-} from 'react-query'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 const environment = process.env.NODE_ENV
 
@@ -20,7 +17,7 @@ const environment = process.env.NODE_ENV
  * Set enableMock(Default false) to true at configs/app.config.js
  * If you wish to enable mock api
  */
-if (environment !== 'production' && appConfig.enableMock) {
+if (environment == 'production' && appConfig.enableMock) {
     mockServer({ environment })
 }
 
