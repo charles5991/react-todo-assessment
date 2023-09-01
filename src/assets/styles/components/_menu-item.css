@@ -10,7 +10,7 @@
         }
 
         &.menu-item-active {
-            @apply text-gray-900 bg-gray-200 hover:bg-gray-200;
+            @apply text-gray-900 bg-blue-500 hover:bg-gray-200;
         }
     }
 
@@ -22,7 +22,7 @@
         }
 
         &.menu-item-active {
-            @apply text-gray-100 bg-gray-600 hover:bg-gray-600;
+            @apply text-gray-100 bg-blue-600 hover:bg-gray-600;
         }
     }
 
@@ -34,7 +34,7 @@
         }
 
         &.menu-item-active {
-            @apply text-gray-100 bg-gray-900 bg-opacity-30 hover:bg-opacity-30;
+            @apply text-gray-100 bg-blue-900 bg-opacity-30 hover:bg-opacity-30;
         }
     }
 

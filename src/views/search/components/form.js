@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import classNames from 'classnames'
+import { Button } from 'components/ui'
 
-const TodoForm = ({ onAdd, parentKey }) => {
+const TodoForm = ({ onAdd, parentKey, themeColor }) => {
     const [title, setTitle] = useState('')
     const [key, setKey] = useState('')
 
@@ -12,7 +14,6 @@ const TodoForm = ({ onAdd, parentKey }) => {
 
         onAdd({ title, key, parentKey })
 
-        // Clear the input fields after adding
         setTitle('')
         setKey('')
     }
@@ -21,7 +22,7 @@ const TodoForm = ({ onAdd, parentKey }) => {
         <form onSubmit={handleSubmit}>
             <input
                 type="text"
-                placeholder="Title"
+                placeholder="項目名"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
             />
@@ -31,7 +32,12 @@ const TodoForm = ({ onAdd, parentKey }) => {
                 value={key}
                 onChange={(e) => setKey(e.target.value)}
             />
-            <button type="submit">Add</button>
+            <Button
+                type="submit"
+                className={classNames(`bg-${themeColor}-500 text-white`)}
+            >
+                Add
+            </Button>
         </form>
     )
 }

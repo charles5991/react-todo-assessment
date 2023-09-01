@@ -174,7 +174,7 @@ const App = () => {
                 onOk={handleOk}
                 onCancel={handleCancel}
             >
-                <TodoForm onAdd={addNewItem} />
+                <TodoForm onAdd={addNewItem} themeColor={themeColor}/>
             </Modal>
         </div>
     )
