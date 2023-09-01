@@ -11,7 +11,9 @@ const Home = () => {
 
     return (
         <div className="justify-center place-content-center flex">
-            <Button onClick={toAdd}>+ 新建一個事項</Button>
+            <Button onClick={toAdd} className="!text-black">
+                + 新建一個事項
+            </Button>
         </div>
     )
 }
