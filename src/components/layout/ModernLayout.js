@@ -5,7 +5,9 @@ import UserDropdown from 'components/template/UserDropdown'
 import SideNavToggle from 'components/template/SideNavToggle'
 import MobileNav from 'components/template/MobileNav'
 import SideNav from 'components/template/SideNav'
+import { useNavigate } from 'react-router-dom'
 import View from 'views'
+import { ActionLink } from 'components/shared'
 
 const HeaderActionsStart = () => {
     return (
@@ -19,7 +21,9 @@ const HeaderActionsStart = () => {
 const HeaderActionMiddle = () => {
     return (
         <>
-            <h3>TODO</h3>
+            <ActionLink to="/">
+                <h3>TODO</h3>
+            </ActionLink>
         </>
     )
 }

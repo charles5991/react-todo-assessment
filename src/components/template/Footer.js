@@ -39,11 +39,11 @@ const FooterContent = () => {
                 {colorList[5].label}
             </div>
             <div
-                className="text-green-700 cursor-pointer"
+                className="text-green-700 cursor-pointer item-center"
                 onClick={() => onThemeColorChange('green')}
             >
                 <BsFillSquareFill />
-                {colorList[2].label}
+                {colorList[1].label}
             </div>
             <div
                 className="text-orange-500 cursor-pointer"

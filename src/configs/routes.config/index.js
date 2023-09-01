@@ -28,6 +28,12 @@ export const protectedRoutes = [
         component: React.lazy(() => import('views/notCompleteItem')),
         authority: [],
     },
+    {
+        key: 'search',
+        path: '/search',
+        component: React.lazy(() => import('views/search')),
+        authority: [],
+    },
     // {
     //     key: 'collapseMenu.item1',
     //     path: '/collapse-menu-item-view-1',
